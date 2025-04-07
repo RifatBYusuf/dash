@@ -24,8 +24,8 @@ with st.spinner("Loading interface..."):
 # Input section
 st.subheader("📅 Add New Entry")
 input_date = st.date_input("Select Date")
-hours = st.selectbox("Hours", list(range(0, 25)))
-minutes = st.selectbox("Minutes", list(range(0, 60)))
+hours = st.slider("Hours", 0, 24, 0)
+minutes = st.slider("Minutes", 0, 59, 0)
 income = st.text_input("Income", placeholder="Enter amount")
 
 if st.button("💾 Save Entry"):
